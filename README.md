@@ -1,1 +1,1 @@
-Website for a restaurant using the MERN stack.
+Website for a restaurant using MERN stack.
