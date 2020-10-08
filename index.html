@@ -89,7 +89,7 @@
                 </div>
                 <div class="col-12 col-sm-3">
                     <br /> <br />
-                    <a class="btn btn-warning" id="reservebutton" href="#reserve">Reserve Table</a>
+                    <a id="reserveButton" class="btn btn-warning" data-toggle="modal" data-target="#reserveModal"> Reserve Table </a>
                 </div>
             </div>
         </div>
@@ -147,51 +147,70 @@
     </div>
         
 <hr> <br />
-        
-        <div class="row" id="reserve">
-            <div class="col-12 col-md-8 offset-md-2">
-                <div class="card">
-                    <h3 class="card-header card-table text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form action="/action_page.php">
-                            <dl class="row">
-                                <dt class="col-12 col-md-3">Number of Guests</dt>
-                                <dd class="col-12 col-md-9">
-                                    <input type="radio" id="guest1" name="guests" value="1">
-                                    <label for="guest1">1 </label> &nbsp;
-                                    <input type="radio" id="guest2" name="guests" value="2">
-                                    <label for="guest2">2 </label> &nbsp;
-                                    <input type="radio" id="guest3" name="guests" value="3">
-                                    <label for="guest3">3 </label> &nbsp;
-                                    <input type="radio" id="guest4" name="guests" value="4">
-                                    <label for="guest4">4 </label> &nbsp;
-                                    <input type="radio" id="guest5" name="guests" value="5">
-                                    <label for="guest5">5 </label> &nbsp;
-                                    <input type="radio" id="guest6" name="guests" value="6">
-                                    <label for="guest6">6 </label> &nbsp;
-                                </dd>                        
-                                <dt class="col-12 col-md-3">Date and Time</dt>
-                                <dd class="col-12 col-md-4">
-                                    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Date">
-                                </dd>
-                                <dd class="col-12 col-md-4">
-                                    <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Time">
-                                </dd>
-                                
-                                <div class="col-md-3"></div>
-                                <div class="col-9 col-md-9">
-                                    <br />
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                            </dl>
-                        </form>
-                    </div>
+    
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="reserve">
+                        <div class="col-12 col-md-12">
+                            <form action="/action_page.php">
+                                <dl class="row">
+                                    <dt class="col-12 col-md-3">Number of Guests</dt>
+                                    <dd class="col-12 col-md-9">
+                                        <input type="radio" id="guest1" name="guests" value="1">
+                                        <label for="guest1">1 </label> &nbsp;
+                                        <input type="radio" id="guest2" name="guests" value="2">
+                                        <label for="guest2">2 </label> &nbsp;
+                                        <input type="radio" id="guest3" name="guests" value="3">
+                                        <label for="guest3">3 </label> &nbsp;
+                                        <input type="radio" id="guest4" name="guests" value="4">
+                                        <label for="guest4">4 </label> &nbsp;
+                                        <input type="radio" id="guest5" name="guests" value="5">
+                                        <label for="guest5">5 </label> &nbsp;
+                                        <input type="radio" id="guest6" name="guests" value="6">
+                                        <label for="guest6">6 </label> &nbsp;
+                                    </dd> 
+                                </dl>
+                                <dl class="row">
+                                    <dt class="col-12 col-md-3">Section</dt>
+                                    <dd class="col-12 col-md-9">
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                          <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                          </label>
+                                          <label class="btn btn-danger">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                          </label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="row">
+                                    <dt class="col-12 col-md-3">Date and Time</dt>
+                                    <dd class="col-12 col-md-4">
+                                        <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Date">
+                                    </dd>
+                                    <dd class="col-12 col-md-4">
+                                        <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Time">
+                                    </dd>
+                                </dl>
+                            </form>
+                        </div>
+                   </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Reserve</button>
                 </div>
             </div>
-       </div>
-
+        </div>
     </div>
-    
+            
     <br /> <br />
 
     <footer class="footer" >
