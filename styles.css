@@ -1,0 +1,77 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.jumbotron {
+    background-color: #6f5499;
+    color: floralwhite;
+}
+
+.footer {
+    background-color: #cdbfe3;
+}
+
+#foot {
+    margin-top: 20px;
+}
+
+#history {
+    padding: 3%;
+}
+
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
+
+.navbar-dark {
+     background-color: #512DA8; !important
+}
+
+.card-table {
+    background-color: #FFA500;
+}
+
+#reserveButton {
+    width: 200px;
+}
+
+.mobileshow {
+    display: none;
+}
+
+.mobilehide {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobileshow {
+        display: block;
+    }
+
+    .mobilehide {
+        display: none;
+    }
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.carousel {
+    background:#512DA8;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
