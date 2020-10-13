@@ -1,0 +1,31 @@
+{
+  "name": "front-end-web-ui-frameworks",
+  "version": "1.0.0",
+  "description": "test directory",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap-social": "^5.1.1",
+    "jquery": "^3.5.1",
+    "lite-server": "^2.5.4"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "popper.js": "^1.16.1"
+  },
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algaringo/Resto.git"
+  },
+  "author": "Angelu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/algaringo/Resto/issues"
+  },
+  "homepage": "https://github.com/algaringo/Resto#readme"
+}
