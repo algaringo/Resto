@@ -7,13 +7,16 @@
     "bootstrap": "^4.5.2",
     "bootstrap-social": "^5.1.1",
     "jquery": "^3.5.1",
-    "lite-server": "^2.5.4"
+    "package.json": "^2.0.1",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
     "font-awesome": "^4.7.0",
+    "lite-server": "^2.5.4",
     "popper.js": "^1.16.1"
   },
   "scripts": {
+    "scss": "node-sass -o css/ css/",
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server"

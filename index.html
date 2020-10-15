@@ -29,10 +29,12 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>  
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                
+                <!-- data-* is removed and replaced with jquery -->
+                <span id="loginButton" class="navbar-text"> 
+                    <span class="fa fa-sign-in"></span> Login
                 </span>
+                
             </div>
         </div>
     </nav>
@@ -86,7 +88,10 @@
                 </div>
                 <div class="col-12 col-sm-3">
                     <br /> <br />
-                    <a id="reserveButton" class="btn btn-warning" data-toggle="modal" data-target="#reserveModal"> Reserve Table </a>
+                    
+                     <!-- data-* is removed and replaced with jquery -->
+                    <a id="reserveButton" class="btn btn-warning"> Reserve Table </a>
+                    
                 </div>
             </div>
         </div>
@@ -200,13 +205,18 @@
                                         <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Time">
                                     </dd>
                                 </dl>
+                                <dl class="row">
+                                    <dt class="col-12 col-md-3"></dt>
+                                    <dd class="col-12 col-md-4"> 
+                                        <br />
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> &nbsp;
+                                        <button type="submit" class="btn btn-primary">Reserve</button>
+                                    </dd>
+                                    <dd class="col-12 col-md-4"></dd>
+                                </dl>
                             </form>
                         </div>
                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Reserve</button>
                 </div>
             </div>
         </div>
@@ -257,6 +267,11 @@
         </div>
     </footer>
     
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>   
+    
     <script>
         $(document).ready(function(){
             $("#carouselButton").click(function(){
@@ -272,11 +287,19 @@
                 }
             });
         });
+        
+        $(document).ready(function(){
+          $("#loginButton").click(function(){
+            $("#loginModal").modal();
+          });
+        });
+        
+        $(document).ready(function(){
+          $("#reserveButton").click(function(){
+            $("#reserveModal").modal();
+          });
+        });
     </script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>    
 </body>
 
 </html>
